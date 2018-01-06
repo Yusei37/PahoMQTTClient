@@ -11,12 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.IMqttMessageListener;
 import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -29,13 +27,6 @@ public class PahoMQTTActivity extends AppCompatActivity {
     private HistoryAdapter mAdapter;
 
     MqttAndroidClient mqttAndroidClient;
-
-    final String serverUri = "tcp://192.168.43.187:1883";
-
-    String clientId = "AndroidClient";
-    final String subscriptionTopic = "sensorData/RGBLED";
-    final String publishTopic = "ctrlData/RGBLED";
-    final String publishMessage = "ff,0,0";
 
     private MQTTBean mqtt;
     private MyMessageBean mypubmessage;
@@ -138,7 +129,7 @@ public class PahoMQTTActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    addToHistory("Failed to connect to: " + serverUri);
+                    addToHistory("Failed to connect to: " + mqtt.getHost());
                 }
             });
 

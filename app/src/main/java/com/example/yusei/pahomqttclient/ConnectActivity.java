@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import com.example.yusei.pahomqttclient.R;
 
 public class ConnectActivity extends AppCompatActivity implements View.OnClickListener{
 

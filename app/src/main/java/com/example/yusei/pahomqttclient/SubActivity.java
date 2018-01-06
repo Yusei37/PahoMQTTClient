@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import com.example.yusei.pahomqttclient.R;
 
 public class SubActivity extends AppCompatActivity implements View.OnClickListener{
 
