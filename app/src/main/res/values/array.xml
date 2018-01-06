@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <string-array name="QoS">
+            
+        <item>0 最多一次的传输</item>
+            
+        <item>1 至少一次的传输</item>
+                
+        <item>2 只有一次的传输</item>
+            
+    </string-array>
+</resources>
